@@ -33,8 +33,8 @@ echo "<p><b>$".$arrayp['prodPrice']."</b></p>";
 echo "<p>Number left in stock: ".$arrayp['prodQuantity']."</p>";
 ?>
 <form action=basket.php method="post">
-<?php echo "<input type='hidden' name=h_prodid value='".$arrayp['prodId']."'>" ?>
-    <select>
+<?php echo "<input type='hidden' name='h_prodid' value='".$arrayp['prodId']."'>" ?>
+    <select name='qty'>
         <?php
             for($x = 1;$x<=$arrayp['prodQuantity'];$x++){
                 echo"<option value='".$x."'>".$x."</option>";
